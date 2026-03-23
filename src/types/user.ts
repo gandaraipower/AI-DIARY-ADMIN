@@ -1,6 +1,6 @@
-export type UserStatus = 'ACTIVE' | 'SUSPEND_7D' | 'BANNED' | 'PENDING_DELETION';
+export type UserStatus = 'ACTIVE' | 'SUSPEND_7D' | 'BANNED' | 'WITHDRAWN';
 export type UserRole = 'ROLE_USER' | 'ROLE_GUEST';
-export type Gender = 'MALE' | 'FEMALE';
+export type Gender = 'M' | 'F';
 
 // 의심 계정 관련
 export type SuspicionType = 'BOT' | 'FAKE_PROFILE' | 'SPAM' | 'MULTI_ACCOUNT' | 'SCAM';
@@ -21,6 +21,7 @@ export interface AdminUserDetail {
   createdAt: string;
   modifiedAt: string;
   lastLoginAt: string;
+  socialProvider: string;
   // 활동 요약
   diaryCount: number;
   matchCount: number;
@@ -65,11 +66,18 @@ export interface SuspiciousAccount {
   activityCount: number;
 }
 
-export interface UserSearchParams {
-  keyword?: string;
+// 기능명세서 기준 커서 기반 검색 파라미터
+export interface MemberSearchParams {
+  cursor?: string;
+  limit?: number;
   status?: UserStatus;
   gender?: Gender;
-  page?: number;
-  size?: number;
-  sort?: string;
+  nickname?: string;
+  email?: string;
+  signupDateFrom?: string;
+  signupDateTo?: string;
+  lastLoginFrom?: string;
+  lastLoginTo?: string;
+  socialProvider?: string;
+  sortBy?: string;
 }

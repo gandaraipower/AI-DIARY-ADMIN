@@ -360,7 +360,7 @@ export default function ExternalContactsPage() {
                     </span>
                   </div>
                   <div className="mt-2">
-                    <Link href={`/admin/users/${detection.userId}`} className="font-semibold text-blue-600 hover:underline">
+                    <Link href={`/admin/members/${detection.userId}`} className="font-semibold text-blue-600 hover:underline">
                       {detection.nickname}
                     </Link>
                   </div>

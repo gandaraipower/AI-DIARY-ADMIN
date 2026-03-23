@@ -244,12 +244,12 @@ export default function BlockHistoryPage() {
                 {filteredBlocks.map(block => (
                   <tr key={block.id} className="hover:bg-muted/30">
                     <td className="px-4 py-3">
-                      <Link href={`/admin/users/${block.blockerId}`} className="text-blue-600 hover:underline">
+                      <Link href={`/admin/members/${block.blockerId}`} className="text-blue-600 hover:underline">
                         {block.blockerNickname}
                       </Link>
                     </td>
                     <td className="px-4 py-3">
-                      <Link href={`/admin/users/${block.blockedId}`} className="text-blue-600 hover:underline">
+                      <Link href={`/admin/members/${block.blockedId}`} className="text-blue-600 hover:underline">
                         {block.blockedNickname}
                       </Link>
                     </td>
@@ -268,7 +268,7 @@ export default function BlockHistoryPage() {
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex gap-1">
-                        <Link href={`/admin/users/${block.blockerId}`}>
+                        <Link href={`/admin/members/${block.blockerId}`}>
                           <Button variant="ghost" size="sm">
                             <Eye className="h-4 w-4" />
                           </Button>
