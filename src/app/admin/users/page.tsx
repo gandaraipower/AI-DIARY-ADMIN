@@ -63,7 +63,7 @@ const MOCK_USERS = [
     realName: '정유진',
     gender: 'FEMALE' as const,
     region: '광주',
-    status: 'BAN' as const,
+    status: 'BANNED' as const,
     diaryCount: 3,
     matchCount: 0,
     createdAt: '2024-03-10T16:00:00',
