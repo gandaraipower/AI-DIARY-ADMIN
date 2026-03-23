@@ -18,7 +18,8 @@ export const REPORT_REASON_LABELS: Record<string, string> = {
   PROFANITY: '욕설/비방',
   OBSCENE: '음란물',
   PERSONAL_INFO: '개인정보 노출',
-  FAKE: '허위 정보',
+  HARASSMENT: '괴롭힘',
+  FAKE_PROFILE: '허위 프로필',
   SPAM: '스팸/광고',
   OTHER: '기타',
 };

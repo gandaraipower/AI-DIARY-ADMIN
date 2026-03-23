@@ -1,4 +1,4 @@
-export type ReportReason = 'PROFANITY' | 'OBSCENE' | 'PERSONAL_INFO' | 'FAKE' | 'SPAM' | 'OTHER';
+export type ReportReason = 'PROFANITY' | 'OBSCENE' | 'PERSONAL_INFO' | 'HARASSMENT' | 'FAKE_PROFILE' | 'SPAM' | 'OTHER';
 export type ReportStatus = 'PENDING' | 'IN_PROGRESS' | 'RESOLVED' | 'DISMISSED';
 
 export interface Report {
